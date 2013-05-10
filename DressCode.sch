@@ -7751,6 +7751,70 @@ http://ww1.microchip.com/downloads/en/DeviceDoc/21984a.pdf</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="SparkFun0modified">
+<description>Spark Fun Electronics' preferred foot prints. &lt;b&gt;Not to be used for commercial purposes.&lt;/b&gt; We've spent an enormous amount of time creating and checking these footprints and parts. If you enjoy using this library, please buy one of our products at www.sparkfun.com.</description>
+<packages>
+<package name="PCM12SMTR">
+<wire x1="-3" y1="-1.5" x2="3" y2="-1.5" width="0.127" layer="21"/>
+<wire x1="-3.05" y1="1.5" x2="-2.7" y2="1.5" width="0.127" layer="21"/>
+<wire x1="-1.8" y1="1.5" x2="0.3" y2="1.5" width="0.127" layer="21"/>
+<wire x1="1.2" y1="1.5" x2="1.8" y2="1.5" width="0.127" layer="21"/>
+<wire x1="2.7" y1="1.5" x2="3" y2="1.5" width="0.127" layer="21"/>
+<wire x1="0" y1="-2.4" x2="0.2" y2="-2.6" width="0.127" layer="21"/>
+<wire x1="0.2" y1="-2.6" x2="1.1" y2="-2.6" width="0.127" layer="21"/>
+<wire x1="1.1" y1="-2.6" x2="1.3" y2="-2.4" width="0.127" layer="21"/>
+<wire x1="1.3" y1="-2.4" x2="1.3" y2="-1.6" width="0.127" layer="21"/>
+<wire x1="0" y1="-2.4" x2="0" y2="-1.6" width="0.127" layer="21"/>
+<wire x1="-3.2" y1="0.6" x2="-3.2" y2="-0.6" width="0.127" layer="21"/>
+<wire x1="3.2" y1="0.6" x2="3.2" y2="-0.6" width="0.127" layer="21"/>
+<smd name="B" x="-3.65" y="1.15" dx="1" dy="0.8" layer="1"/>
+<smd name="A" x="-3.65" y="-1.15" dx="1" dy="0.8" layer="1"/>
+<smd name="C" x="3.65" y="1.15" dx="1" dy="0.8" layer="1"/>
+<smd name="D" x="3.65" y="-1.15" dx="1" dy="0.8" layer="1"/>
+<smd name="1" x="-2.25" y="1.75" dx="0.7" dy="1.5" layer="1"/>
+<smd name="2" x="0.75" y="1.75" dx="0.7" dy="1.5" layer="1"/>
+<smd name="3" x="2.25" y="1.75" dx="0.7" dy="1.5" layer="1"/>
+<text x="5.08" y="1.27" size="0.8128" layer="25">&gt;NAME</text>
+<text x="5.08" y="-1.27" size="0.8128" layer="27">&gt;VALUE</text>
+<hole x="1.5" y="0" drill="0.9"/>
+<hole x="-1.5" y="0" drill="0.9"/>
+</package>
+</packages>
+<symbols>
+<symbol name="TOGGLE">
+<wire x1="0" y1="0" x2="2.54" y2="1.27" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-2.54" x2="3.175" y2="-2.54" width="0.127" layer="94"/>
+<wire x1="2.54" y1="2.54" x2="3.175" y2="2.54" width="0.1524" layer="94"/>
+<circle x="2.54" y="2.54" radius="0.3592" width="0.2032" layer="94"/>
+<circle x="2.54" y="-2.54" radius="0.3592" width="0.2032" layer="94"/>
+<circle x="0" y="0" radius="0.3592" width="0.2032" layer="94"/>
+<text x="-1.905" y="-6.35" size="1.778" layer="95">&gt;NAME</text>
+<text x="-2.54" y="3.81" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="P" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
+<pin name="S" x="5.08" y="-2.54" visible="off" length="short" direction="pas" rot="R180"/>
+<pin name="O" x="5.08" y="2.54" visible="off" length="short" direction="pas" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="PCM12SMTR">
+<gates>
+<gate name="G$1" symbol="TOGGLE" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="PCM12SMTR">
+<connects>
+<connect gate="G$1" pin="O" pad="1"/>
+<connect gate="G$1" pin="P" pad="2"/>
+<connect gate="G$1" pin="S" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -7803,6 +7867,7 @@ http://ww1.microchip.com/downloads/en/DeviceDoc/21984a.pdf</description>
 <part name="U$7" library="x-io" deviceset="DRESSCODE_SEW_PAD" device="S"/>
 <part name="U$8" library="x-io" deviceset="DRESSCODE_SEW_PAD" device="S"/>
 <part name="U$10" library="x-io" deviceset="DRESSCODE_SEW_PAD" device="S"/>
+<part name="SW1" library="SparkFun0modified" deviceset="PCM12SMTR" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -7815,9 +7880,9 @@ http://ww1.microchip.com/downloads/en/DeviceDoc/21984a.pdf</description>
 <wire x1="203.2" y1="76.2" x2="203.2" y2="48.26" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="203.2" y1="48.26" x2="175.26" y2="48.26" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="175.26" y1="48.26" x2="175.26" y2="76.2" width="0.1524" layer="97" style="shortdash"/>
-<wire x1="5.08" y1="104.14" x2="284.48" y2="104.14" width="0.1524" layer="97"/>
-<wire x1="284.48" y1="104.14" x2="284.48" y2="5.08" width="0.1524" layer="97"/>
-<wire x1="284.48" y1="5.08" x2="5.08" y2="5.08" width="0.1524" layer="97"/>
+<wire x1="5.08" y1="104.14" x2="274.32" y2="104.14" width="0.1524" layer="97"/>
+<wire x1="274.32" y1="104.14" x2="274.32" y2="5.08" width="0.1524" layer="97"/>
+<wire x1="274.32" y1="5.08" x2="5.08" y2="5.08" width="0.1524" layer="97"/>
 <wire x1="5.08" y1="5.08" x2="5.08" y2="104.14" width="0.1524" layer="97"/>
 <wire x1="5.08" y1="254" x2="170.18" y2="254" width="0.1524" layer="97"/>
 <wire x1="170.18" y1="254" x2="170.18" y2="177.8" width="0.1524" layer="97"/>
@@ -7839,10 +7904,10 @@ http://ww1.microchip.com/downloads/en/DeviceDoc/21984a.pdf</description>
 <wire x1="381" y1="254" x2="381" y2="106.68" width="0.1524" layer="97"/>
 <wire x1="381" y1="106.68" x2="172.72" y2="106.68" width="0.1524" layer="97"/>
 <wire x1="172.72" y1="106.68" x2="172.72" y2="254" width="0.1524" layer="97"/>
-<wire x1="287.02" y1="104.14" x2="381" y2="104.14" width="0.1524" layer="97"/>
+<wire x1="276.86" y1="104.14" x2="381" y2="104.14" width="0.1524" layer="97"/>
 <wire x1="381" y1="104.14" x2="381" y2="25.4" width="0.1524" layer="97"/>
-<wire x1="381" y1="25.4" x2="287.02" y2="25.4" width="0.1524" layer="97"/>
-<wire x1="287.02" y1="25.4" x2="287.02" y2="104.14" width="0.1524" layer="97"/>
+<wire x1="381" y1="25.4" x2="276.86" y2="25.4" width="0.1524" layer="97"/>
+<wire x1="276.86" y1="25.4" x2="276.86" y2="104.14" width="0.1524" layer="97"/>
 <text x="175.26" y="78.74" size="1.778" layer="97">7.32 kHz low-pass filter</text>
 <text x="73.66" y="38.1" size="1.778" layer="97">7.32 Hz high-pass filter</text>
 <text x="7.62" y="99.06" size="2.54" layer="97">Microphone and preamp</text>
@@ -7852,11 +7917,11 @@ http://ww1.microchip.com/downloads/en/DeviceDoc/21984a.pdf</description>
 <text x="35.56" y="233.68" size="1.778" layer="97">7.32 Hz low-pass filter</text>
 <text x="7.62" y="170.18" size="2.54" layer="97">LED drivers</text>
 <text x="175.26" y="248.92" size="2.54" layer="97">PIC24F</text>
-<text x="289.56" y="99.06" size="2.54" layer="97">Battery and charging</text>
+<text x="279.4" y="99.06" size="2.54" layer="97">Battery and charging</text>
 <text x="294.64" y="15.24" size="2.54" layer="94">Author: Seb Madgwick</text>
 <text x="10.16" y="15.24" size="1.778" layer="97">Only one microphone should be populated, M1 or M2</text>
 <text x="294.64" y="10.16" size="2.54" layer="94">v1.0</text>
-<text x="289.56" y="27.94" size="1.778" layer="97">STAT requires PIC24F internal pull-up</text>
+<text x="279.4" y="27.94" size="1.778" layer="97">STAT requires PIC24F internal pull-up</text>
 </plain>
 <instances>
 <instance part="M1" gate="G$1" x="50.8" y="53.34" smashed="yes" rot="MR270">
@@ -7950,26 +8015,30 @@ http://ww1.microchip.com/downloads/en/DeviceDoc/21984a.pdf</description>
 <attribute name="NAME" x="325.12" y="84.328" size="1.778" layer="95"/>
 <attribute name="VALUE" x="325.12" y="81.28" size="1.778" layer="96"/>
 </instance>
-<instance part="USB1" gate="G$1" x="299.72" y="81.28" rot="R180"/>
-<instance part="C5" gate="G$1" x="312.42" y="66.04" smashed="yes" rot="R180">
-<attribute name="NAME" x="316.484" y="63.881" size="1.778" layer="95"/>
-<attribute name="VALUE" x="316.484" y="61.341" size="1.778" layer="96"/>
+<instance part="USB1" gate="G$1" x="294.64" y="81.28" rot="R180"/>
+<instance part="C5" gate="G$1" x="307.34" y="68.58" smashed="yes" rot="R180">
+<attribute name="NAME" x="311.404" y="68.961" size="1.778" layer="95"/>
+<attribute name="VALUE" x="311.404" y="66.421" size="1.778" layer="96"/>
 </instance>
 <instance part="R8" gate="G$1" x="355.6" y="66.04" smashed="yes" rot="R90">
 <attribute name="NAME" x="358.1146" y="66.3448" size="1.778" layer="95"/>
 <attribute name="VALUE" x="358.1146" y="64.0842" size="1.778" layer="96"/>
 </instance>
-<instance part="C6" gate="G$1" x="368.3" y="66.04" smashed="yes" rot="R180">
-<attribute name="NAME" x="369.824" y="62.6364" size="1.778" layer="95"/>
-<attribute name="VALUE" x="369.824" y="60.0964" size="1.778" layer="96"/>
+<instance part="C6" gate="G$1" x="368.3" y="68.58" smashed="yes" rot="R180">
+<attribute name="NAME" x="372.364" y="70.2564" size="1.778" layer="95"/>
+<attribute name="VALUE" x="372.364" y="67.7164" size="1.778" layer="96"/>
 </instance>
-<instance part="JST1" gate="G$1" x="350.52" y="33.02" smashed="yes">
-<attribute name="VALUE" x="347.98" y="27.94" size="1.778" layer="96"/>
-<attribute name="NAME" x="345.44" y="32.258" size="1.778" layer="95" rot="R180"/>
+<instance part="JST1" gate="G$1" x="292.1" y="43.18" smashed="yes">
+<attribute name="VALUE" x="289.56" y="38.1" size="1.778" layer="96"/>
+<attribute name="NAME" x="287.02" y="42.418" size="1.778" layer="95" rot="R180"/>
 </instance>
 <instance part="U$7" gate="G$1" x="38.1" y="160.02" rot="R90"/>
 <instance part="U$8" gate="G$1" x="88.9" y="160.02" rot="R90"/>
 <instance part="U$10" gate="G$1" x="144.78" y="160.02" rot="R90"/>
+<instance part="SW1" gate="G$1" x="347.98" y="35.56" smashed="yes">
+<attribute name="NAME" x="358.775" y="31.75" size="1.778" layer="95"/>
+<attribute name="VALUE" x="358.14" y="29.21" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -8085,20 +8154,20 @@ http://ww1.microchip.com/downloads/en/DeviceDoc/21984a.pdf</description>
 </segment>
 <segment>
 <pinref part="USB1" gate="G$1" pin="D+"/>
-<wire x1="302.26" y1="73.66" x2="304.8" y2="73.66" width="0.1524" layer="91"/>
-<wire x1="304.8" y1="73.66" x2="304.8" y2="68.58" width="0.1524" layer="91"/>
-<label x="304.8" y="66.04" size="1.778" layer="95" rot="R270"/>
+<wire x1="297.18" y1="73.66" x2="299.72" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="299.72" y1="73.66" x2="299.72" y2="68.58" width="0.1524" layer="91"/>
+<label x="299.72" y="66.04" size="1.778" layer="95" rot="R270"/>
 </segment>
 <segment>
 <pinref part="C5" gate="G$1" pin="1"/>
-<wire x1="312.42" y1="63.5" x2="312.42" y2="58.42" width="0.1524" layer="91"/>
-<label x="312.42" y="55.88" size="1.778" layer="95" rot="R270"/>
+<wire x1="307.34" y1="66.04" x2="307.34" y2="63.5" width="0.1524" layer="91"/>
+<label x="307.34" y="60.96" size="1.778" layer="95" rot="R270"/>
 </segment>
 <segment>
 <pinref part="U5" gate="G$1" pin="VSS"/>
 <wire x1="342.9" y1="71.12" x2="347.98" y2="71.12" width="0.1524" layer="91"/>
-<wire x1="347.98" y1="71.12" x2="347.98" y2="63.5" width="0.1524" layer="91"/>
-<label x="347.98" y="60.96" size="1.778" layer="95" rot="R270"/>
+<wire x1="347.98" y1="71.12" x2="347.98" y2="66.04" width="0.1524" layer="91"/>
+<label x="347.98" y="63.5" size="1.778" layer="95" rot="R270"/>
 </segment>
 <segment>
 <pinref part="R8" gate="G$1" pin="1"/>
@@ -8107,13 +8176,13 @@ http://ww1.microchip.com/downloads/en/DeviceDoc/21984a.pdf</description>
 </segment>
 <segment>
 <pinref part="C6" gate="G$1" pin="1"/>
-<wire x1="368.3" y1="63.5" x2="368.3" y2="53.34" width="0.1524" layer="91"/>
-<label x="368.3" y="50.8" size="1.778" layer="95" rot="R270"/>
+<wire x1="368.3" y1="66.04" x2="368.3" y2="60.96" width="0.1524" layer="91"/>
+<label x="368.3" y="58.42" size="1.778" layer="95" rot="R270"/>
 </segment>
 <segment>
 <pinref part="JST1" gate="G$1" pin="1"/>
-<wire x1="358.14" y1="33.02" x2="363.22" y2="33.02" width="0.1524" layer="91"/>
-<label x="365.76" y="33.02" size="1.778" layer="95" rot="MR180"/>
+<wire x1="299.72" y1="43.18" x2="304.8" y2="43.18" width="0.1524" layer="91"/>
+<label x="307.34" y="43.18" size="1.778" layer="95" rot="MR180"/>
 </segment>
 </net>
 <net name="AVDD" class="0">
@@ -8327,18 +8396,9 @@ http://ww1.microchip.com/downloads/en/DeviceDoc/21984a.pdf</description>
 <label x="208.28" y="149.86" size="1.778" layer="95" rot="R90"/>
 </segment>
 <segment>
-<pinref part="U5" gate="G$1" pin="VBAT"/>
-<wire x1="342.9" y1="76.2" x2="368.3" y2="76.2" width="0.1524" layer="91"/>
-<pinref part="C6" gate="G$1" pin="2"/>
-<wire x1="368.3" y1="71.12" x2="368.3" y2="76.2" width="0.1524" layer="91"/>
-<junction x="368.3" y="76.2"/>
-<wire x1="368.3" y1="76.2" x2="368.3" y2="83.82" width="0.1524" layer="91"/>
-<label x="368.3" y="86.36" size="1.778" layer="95" rot="R90"/>
-</segment>
-<segment>
-<pinref part="JST1" gate="G$1" pin="2"/>
-<wire x1="358.14" y1="35.56" x2="363.22" y2="35.56" width="0.1524" layer="91"/>
-<label x="365.76" y="35.56" size="1.778" layer="95" rot="MR180"/>
+<pinref part="SW1" gate="G$1" pin="P"/>
+<wire x1="345.44" y1="35.56" x2="340.36" y2="35.56" width="0.1524" layer="91"/>
+<label x="337.82" y="35.56" size="1.778" layer="95" rot="R180"/>
 </segment>
 </net>
 <net name="N$5" class="0">
@@ -8532,11 +8592,11 @@ http://ww1.microchip.com/downloads/en/DeviceDoc/21984a.pdf</description>
 <segment>
 <pinref part="USB1" gate="G$1" pin="D-"/>
 <pinref part="U5" gate="G$1" pin="VIN"/>
-<wire x1="302.26" y1="76.2" x2="312.42" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="297.18" y1="76.2" x2="307.34" y2="76.2" width="0.1524" layer="91"/>
 <pinref part="C5" gate="G$1" pin="2"/>
-<wire x1="312.42" y1="76.2" x2="322.58" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="312.42" y1="71.12" x2="312.42" y2="76.2" width="0.1524" layer="91"/>
-<junction x="312.42" y="76.2"/>
+<wire x1="307.34" y1="76.2" x2="322.58" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="307.34" y1="73.66" x2="307.34" y2="76.2" width="0.1524" layer="91"/>
+<junction x="307.34" y="76.2"/>
 </segment>
 </net>
 <net name="N$15" class="0">
@@ -8570,6 +8630,27 @@ http://ww1.microchip.com/downloads/en/DeviceDoc/21984a.pdf</description>
 <pinref part="JP1" gate="G$1" pin="2"/>
 <wire x1="259.08" y1="132.08" x2="264.16" y2="132.08" width="0.1524" layer="91"/>
 <label x="266.7" y="132.08" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="BATT" class="0">
+<segment>
+<pinref part="JST1" gate="G$1" pin="2"/>
+<wire x1="299.72" y1="45.72" x2="304.8" y2="45.72" width="0.1524" layer="91"/>
+<label x="307.34" y="45.72" size="1.778" layer="95" rot="MR180"/>
+</segment>
+<segment>
+<pinref part="U5" gate="G$1" pin="VBAT"/>
+<wire x1="342.9" y1="76.2" x2="368.3" y2="76.2" width="0.1524" layer="91"/>
+<pinref part="C6" gate="G$1" pin="2"/>
+<wire x1="368.3" y1="73.66" x2="368.3" y2="76.2" width="0.1524" layer="91"/>
+<junction x="368.3" y="76.2"/>
+<wire x1="368.3" y1="76.2" x2="368.3" y2="83.82" width="0.1524" layer="91"/>
+<label x="368.3" y="86.36" size="1.778" layer="95" rot="R90"/>
+</segment>
+<segment>
+<pinref part="SW1" gate="G$1" pin="O"/>
+<wire x1="353.06" y1="38.1" x2="358.14" y2="38.1" width="0.1524" layer="91"/>
+<label x="360.68" y="38.1" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
