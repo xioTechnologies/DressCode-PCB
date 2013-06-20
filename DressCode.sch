@@ -7920,7 +7920,7 @@ http://ww1.microchip.com/downloads/en/DeviceDoc/21984a.pdf</description>
 <text x="279.4" y="99.06" size="2.54" layer="97">Battery and charging</text>
 <text x="294.64" y="15.24" size="2.54" layer="94">Author: Seb Madgwick</text>
 <text x="10.16" y="15.24" size="1.778" layer="97">Only one microphone should be populated, M1 or M2</text>
-<text x="294.64" y="10.16" size="2.54" layer="94">v1.0</text>
+<text x="294.64" y="10.16" size="2.54" layer="94">v1.1</text>
 <text x="279.4" y="27.94" size="1.778" layer="97">STAT requires PIC24F internal pull-up</text>
 </plain>
 <instances>
@@ -8015,7 +8015,7 @@ http://ww1.microchip.com/downloads/en/DeviceDoc/21984a.pdf</description>
 <attribute name="NAME" x="325.12" y="84.328" size="1.778" layer="95"/>
 <attribute name="VALUE" x="325.12" y="81.28" size="1.778" layer="96"/>
 </instance>
-<instance part="USB1" gate="G$1" x="294.64" y="81.28" rot="R180"/>
+<instance part="USB1" gate="G$1" x="294.64" y="73.66" rot="MR0"/>
 <instance part="C5" gate="G$1" x="307.34" y="68.58" smashed="yes" rot="R180">
 <attribute name="NAME" x="311.404" y="68.961" size="1.778" layer="95"/>
 <attribute name="VALUE" x="311.404" y="66.421" size="1.778" layer="96"/>
@@ -8153,10 +8153,10 @@ http://ww1.microchip.com/downloads/en/DeviceDoc/21984a.pdf</description>
 <label x="33.02" y="38.1" size="1.778" layer="95" rot="R270"/>
 </segment>
 <segment>
-<pinref part="USB1" gate="G$1" pin="D+"/>
-<wire x1="297.18" y1="73.66" x2="299.72" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="299.72" y1="73.66" x2="299.72" y2="68.58" width="0.1524" layer="91"/>
 <label x="299.72" y="66.04" size="1.778" layer="95" rot="R270"/>
+<pinref part="USB1" gate="G$1" pin="GND"/>
+<wire x1="297.18" y1="73.66" x2="299.72" y2="73.66" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="C5" gate="G$1" pin="1"/>
@@ -8590,12 +8590,12 @@ http://ww1.microchip.com/downloads/en/DeviceDoc/21984a.pdf</description>
 </net>
 <net name="USB1" class="0">
 <segment>
-<pinref part="USB1" gate="G$1" pin="D-"/>
 <pinref part="U5" gate="G$1" pin="VIN"/>
-<wire x1="297.18" y1="76.2" x2="307.34" y2="76.2" width="0.1524" layer="91"/>
 <pinref part="C5" gate="G$1" pin="2"/>
 <wire x1="307.34" y1="76.2" x2="322.58" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="307.34" y1="73.66" x2="307.34" y2="76.2" width="0.1524" layer="91"/>
+<pinref part="USB1" gate="G$1" pin="VBUS"/>
+<wire x1="297.18" y1="76.2" x2="307.34" y2="76.2" width="0.1524" layer="91"/>
 <junction x="307.34" y="76.2"/>
 </segment>
 </net>
